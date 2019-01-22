@@ -24,8 +24,8 @@ public class ContaReceber implements Serializable,Lancamento {
 	@Column(name = "descricao", length = 80, nullable = false)
 	private String descricao;
 	@Column(name = "valor",  nullable = false)
-	private float valor;
-	@Column(name = "vencimento", insertable = true, updatable = true, nullable = false)
+	private double valor;
+	@Column(name = "vencimento", insertable = true, updatable = true)
 	private LocalDate vencimento;
 	
 	
@@ -37,11 +37,8 @@ public class ContaReceber implements Serializable,Lancamento {
 		this.descricao = descricao;
 	}
 
-	public float getValor() {
-		return valor;
-	}
 
-	public void setValor(float valor) {
+	public void setValor(double valor) {
 		this.valor = valor;
 	}
 
@@ -64,6 +61,10 @@ public class ContaReceber implements Serializable,Lancamento {
 	@Override
 	public String toString() {
 		return  descricao + " Valor: " + valor;
+	}
+
+	public double getValor() {
+		return valor;
 	}
 	
 	

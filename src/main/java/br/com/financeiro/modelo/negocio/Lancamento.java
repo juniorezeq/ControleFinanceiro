@@ -6,5 +6,5 @@ public interface Lancamento {
 
 	public String getDescricao();
 	public LocalDate getVencimento();
-	public float getValor();
+	public double getValor();
 }
