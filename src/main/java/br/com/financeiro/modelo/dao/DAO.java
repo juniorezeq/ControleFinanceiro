@@ -31,6 +31,7 @@ public class DAO<T> implements Serializable {
 	}
 
 	public List<T> listaTodos() {
+
 		CriteriaQuery<T> query = em.getCriteriaBuilder().createQuery(classe);
 		query.select(query.from(classe));
 
